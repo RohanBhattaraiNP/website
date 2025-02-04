@@ -1,11 +1,272 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohan | Physics @ Caltech</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Add MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']],
+                processEscapes: true
+            },
+            svg: {
+                fontCache: 'global'
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
 </head>
 
 <body>
-    <h1>Home</h1>
-    <a href="about.php">About</a>
+    <!-- Background Elements -->
+    <div class="equation-background"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">R∇H</div>
+        <ul class="nav-links">
+            <li><a href="#home" data-text="Home">Home</a></li>
+            <li><a href="#about" data-text="Research">Research</a></li>
+            <li><a href="#projects" data-text="Projects">Projects</a></li>
+            <li><a href="#publications" data-text="Publications">Publications</a></li>
+            <li><a href="#contact" data-text="Contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="glitch" data-text="ROHAN">ROHAN</h1>
+            <div class="typing-container">
+                <p class="typing-text">Bachelor's in Physics @ Caltech</p>
+            </div>
+            <div class="quantum-description">
+                <span class="bracket">|</span>
+                <span class="psi">ψ</span>
+                <span class="bracket">⟩</span>
+            </div>
+            <div class="social-links">
+                <a href="#" class="neon-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="neon-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="neon-link"><i class="fas fa-paper-plane"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Focus Section -->
+    <section id="research" class="research-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Research Focus and Interests</h2>
+            </div>
+            <div class="research-grid">
+                <div class="research-card">
+                    <h3>Quantum Physics</h3>
+                    <ul class="research-list">
+                        <li>Advanced Quantum Mechanics</li>
+                        <li>Quantum Computing</li>
+                        <li>Quantum Error Correction</li>
+                    </ul>
+                </div>
+
+                <div class="research-card">
+                    <h3>High Energy Physics</h3>
+                    <ul class="research-list">
+                        <li>Elementary Particle Physics</li>
+                        <li>Relativistic Astrophysics</li>
+                        <li>Group Theory Applications</li>
+                    </ul>
+                </div>
+
+                <div class="research-card">
+                    <h3>Scientific Computing</h3>
+                    <ul class="research-list">
+                        <li>High Performance Computing</li>
+                        <li>Machine Learning in Physics</li>
+                        <li>Monte Carlo Methods</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="featured" class="featured-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Projects</h2>
+                <p>Technical implementations and developments</p>
+            </div>
+            <div class="featured-grid">
+                <div class="featured-item">
+                    <h3>Cryoscope Integration</h3>
+                    <p>A cryogenically cooled wide-field telescope designed for extreme Antarctic conditions. Engineered
+                        thermal control systems capable of operating at -80°C, with custom data acquisition pipeline
+                        using Telnet and USB SPI protocols. Implemented real-time monitoring with InfluxDB and Grafana
+                        dashboards for continuous system health checks.</p>
+                </div>
+
+                <div class="featured-item">
+                    <h3>Post-Earthquake Analysis</h3>
+                    <p>Developed machine learning models to analyze hydrological changes in earthquake-affected regions.
+                        Combined field data with SWAT and HEC-HMS simulations to predict water flow patterns. Created
+                        interactive visualizations of temporal changes in river dynamics and groundwater levels using
+                        Python and GIS tools.</p>
+                </div>
+
+                <div class="featured-item">
+                    <h3>Project Hriday</h3>
+                    <p>IoT-based cardiac monitoring system using Arduino and machine learning. Built a custom ECG signal
+                        processing pipeline with real-time anomaly detection. Implemented a TensorFlow model trained on
+                        100,000+ heartbeat patterns, with automated report generation and emergency alert system via
+                        Gmail API.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="publications-section">
+        <div class="container">
+            <h2>Publications & Projects</h2>
+            <div class="publications-grid">
+                <div class="publication-card">
+                    <h3>Cryoscope: A Wide-Field Telescope for Antarctica</h3>
+                    <p class="pub-authors">Caltech Optical Observatory, et al.</p>
+                    <p class="pub-details">Development of thermal control and data acquisition systems for a
+                        cryogenically cooled telescope designed for extreme Antarctic conditions.</p>
+                    <div class="pub-links">
+                        <a href="https://github.com/Caltech-IPAC/cryoscope" target="_blank" class="pub-link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" target="_blank" class="pub-link">
+                            <i class="fas fa-file-alt"></i> Paper (Coming Soon)
+                        </a>
+                    </div>
+                </div>
+
+                <div class="publication-card">
+                    <h3>CaltechDATA API Integration</h3>
+                    <p class="pub-authors">CaltechDATA Team</p>
+                    <p class="pub-details">Enhanced repository infrastructure with automated workflows, metadata
+                        validation, and REST API integration for research data management.</p>
+                    <div class="pub-links">
+                        <a href="https://github.com/caltechlibrary/caltechdata_api" target="_blank" class="pub-link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://data.caltech.edu/" target="_blank" class="pub-link">
+                            <i class="fas fa-external-link-alt"></i> Project
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <div class="contact-container">
+            <form class="contact-form">
+                <div class="form-field">
+                    <input type="text" required>
+                    <label>Name</label>
+                </div>
+                <div class="form-field">
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="form-field">
+                    <textarea required></textarea>
+                    <label>Message</label>
+                </div>
+                <button type="submit" class="btn">
+                    <span>Send Message</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>About Me</h3>
+                    <p>Exploring the intersection of quantum mechanics and computation.</p>
+                    <div class="footer-equation">|ψ⟩ = α|0⟩ + β|1⟩</div>
+                    <p class="footer-quote">"Not only is the Universe stranger than we think, it is stranger than we can
+                        think." - Werner Heisenberg</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#publications">Publications</a></li>
+                        <li><a href="#research">Research Areas</a></li>
+                        <li><a href="#teaching">Teaching</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="footer-social">
+                        <a href="https://github.com/" target="_blank" rel="noopener noreferrer" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://arxiv.org/" target="_blank" rel="noopener noreferrer" title="arXiv">
+                            <i class="fas fa-book"></i>
+                        </a>
+                        <a href="mailto:your.email@caltech.edu" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                    <p class="contact-info">
+                        <i class="fas fa-map-marker-alt"></i> Caltech, Pasadena, CA
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-nav">
+                    <a href="#home">Home</a>
+                    <span class="separator">•</span>
+                    <a href="#about">Research</a>
+                    <span class="separator">•</span>
+                    <a href="#projects">Projects</a>
+                    <span class="separator">•</span>
+                    <a href="#contact">Contact</a>
+                </div>
+                <p class="copyright">
+                    &copy; 2025 <span class="neon-text">rohanatcal.tech</span> | Built with
+                    <span class="neon-text"><i class="fas fa-atom"></i></span> and
+                    <span class="neon-text"><i class="fas fa-code"></i></span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- EmailJS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </body>
+
 </html>
